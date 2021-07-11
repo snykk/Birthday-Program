@@ -1,9 +1,14 @@
 import os
 import time
+R = '\033[31m' # red
+G = '\033[32m' # green
+C = '\033[36m' # cyan
+W = '\033[0m'  # white
+
 string = "happy birthday to you, patrick"
 cek1 = 0
 cek2 = 1
-cake = '''
+cake = W + '''
                        *
                     _|_|_
                    |     |
@@ -12,9 +17,9 @@ cake = '''
      _|_|_     +-------------+
     |     |    |             |
     +-----+    +-------------+
-===================================
+\033[32m===================================
 '''
-cake1 = '''
+cake1 = W + '''
                      *
                     _|_|_
                    |     |
@@ -23,10 +28,10 @@ cake1 = '''
      _|_|_     +-------------+
     |     |    |             |
     +-----+    +-------------+
-===================================
+\033[32m===================================
 '''
 while True:
-    os.system('cls')
+    os.system('clear')
     depan = string[:cek1]
     if string[cek1].islower():
         tengah1 = string[cek1].upper()
@@ -49,10 +54,10 @@ while True:
         print(cake1)
     if cek2 == 0:
         string_baru =tengah2 +  depan[1:] + tengah1 + belakang + kemren
-        print("~~> " + string_baru)
+        print(R + "~~> " + C + string_baru)
     else: 
         string_baru = depan + tengah1 + tengah2 + belakang + kemren
-        print("~~> " + string_baru)
+        print(R + "~~> " + C + string_baru)
     time.sleep(0.1)
     cek1 += 1
     cek2 += 1

@@ -54,10 +54,10 @@ while True:
         print(cake1)
     if cek2 == 0:
         string_baru =tengah2 +  depan[1:] + tengah1 + belakang + kemren
-        print(R + "~~> " + C + string_baru)
+        print(R + "~~> " + C + string_baru + W)
     else: 
         string_baru = depan + tengah1 + tengah2 + belakang + kemren
-        print(R + "~~> " + C + string_baru)
+        print(R + "~~> " + C + string_baru + W)
     time.sleep(0.1)
     cek1 += 1
     cek2 += 1
